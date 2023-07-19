@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/" => "application#square"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/square/new" => "application#square"
+  get "/square/results" => "application#square_results"
+  
+  get "/square_root/new" => "application#square_root"
+  get "/square_root/results" => "application#square_root_results"
+
+  get "/payment/new" => "application#payment"
+  get "/payment/results" => "application#payment_results"
+
+  get "/random/new" => "application#random"
+  get "/random/results" => "application#random_results"
 end
